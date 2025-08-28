@@ -1,0 +1,12 @@
+student_id,course_id,extra_field
+"Smith, John",CS101,extra1
+"Doe, Jane",CS101,extra2
+student3,CS101,extra3
+# This is a comment line
+"Wilson, Bob",CS202,extra4
+student5,"CS202, Advanced",extra5
+student6,CS303,extra6
+"Brown, Alice",CS303,extra7
+
+# Empty line above should be ignored
+"Green, Tom",CS404,extra8

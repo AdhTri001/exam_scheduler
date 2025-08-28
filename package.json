@@ -1,0 +1,49 @@
+{
+  "name": "exam-scheduler",
+  "version": "1.0.0",
+  "description": "A browser-based exam scheduling tool powered by WebAssembly",
+  "private": true,
+  "scripts": {
+    "build:wasm": "cd go && GOOS=js GOARCH=wasm go build -o ../web/public/main.wasm ./cmd/wasm",
+    "build:wasm:windows": "cd go && set GOOS=js&& set GOARCH=wasm&& go build -o ../web/public/main.wasm ./cmd/wasm",
+    "copy:wasm-exec": "cp \"$(go env GOROOT)/misc/wasm/wasm_exec.js\" web/public/",
+    "copy:wasm-exec:windows": "copy \"%GOROOT%\\misc\\wasm\\wasm_exec.js\" web\\public\\",
+    "install:web": "cd web && npm install",
+    "dev:web": "cd web && npm run dev",
+    "build:web": "cd web && npm run build",
+    "lint:web": "cd web && npm run lint",
+    "test:go": "cd go && go test ./...",
+    "build": "npm run build:wasm && npm run build:web",
+    "build:windows": "npm run build:wasm:windows && npm run build:web",
+    "dev": "npm run build:wasm && npm run dev:web",
+    "dev:windows": "npm run build:wasm:windows && npm run dev:web",
+    "test": "npm run test:go && npm run lint:web",
+    "clean": "cd web && rm -rf dist node_modules && cd ../go && go clean -cache",
+    "clean:windows": "cd web && rmdir /s /q dist node_modules 2>nul & cd ../go && go clean -cache",
+    "setup": "npm run install:web && npm run copy:wasm-exec && npm run build:wasm",
+    "setup:windows": "npm run install:web && npm run copy:wasm-exec:windows && npm run build:wasm:windows"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/exam_scheduler.git"
+  },
+  "keywords": [
+    "exam-scheduling",
+    "webassembly",
+    "react",
+    "go",
+    "graph-coloring",
+    "education",
+    "scheduling"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/exam_scheduler/issues"
+  },
+  "homepage": "https://yourusername.github.io/exam_scheduler/",
+  "engines": {
+    "node": ">=18.0.0",
+    "go": ">=1.22.0"
+  }
+}

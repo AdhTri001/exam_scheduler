@@ -1,0 +1,6 @@
+hall,capacity,group
+"Hall A, Wing 1",100,North
+Hall B,50,
+"Hall C, Large",200,"Group, Special"
+# Comment hall
+Hall D,75,South

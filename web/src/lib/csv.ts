@@ -15,7 +15,7 @@ export function parseCsv(csvString: string): Promise<Papa.ParseResult<any>> {
       header: true,
       skipEmptyLines: true,
       complete: (results) => resolve(results),
-      error: (error) => reject(error),
+      error: (error: any) => reject(error),
     });
   });
 }

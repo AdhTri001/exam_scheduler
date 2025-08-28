@@ -272,7 +272,7 @@ function App() {
             variant="contained"
             sx={{ minWidth: 100 }}
           >
-            {activeStep === 2 ? 'Complete' : 'Next'}
+            Next
           </Button>
         </Box>
 

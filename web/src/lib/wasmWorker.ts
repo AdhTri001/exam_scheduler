@@ -4,7 +4,7 @@
  */
 /// <reference lib="webworker" />
 
-import { WasmAPI, RunScheduleParams } from './wasmTypes';
+import type { WasmAPI } from './wasmTypes';
 
 // The globalThis object in the worker will have the Go object and wasm functions
 declare const globalThis: Window & typeof global & WasmAPI & {

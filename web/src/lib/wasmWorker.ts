@@ -16,13 +16,15 @@ const wasmReadyPromise = new Promise<void>(async (resolve) => {
     try {
         // In a module worker, importScripts is not available.
         // We fetch and evaluate the script manually.
-        const wasmExecCode = await fetch('/wasm_exec.js').then(r => r.text());
+        // Use the correct base path for GitHub Pages
+        const basePath = import.meta.env.PROD ? '/exam_scheduler/' : '/';
+        const wasmExecCode = await fetch(`${basePath}wasm_exec.js`).then(r => r.text());
         (0, eval)(wasmExecCode);
 
         const go = new globalThis.Go();
 
         const wasmModule = await WebAssembly.instantiateStreaming(
-            fetch('/main.wasm'),
+            fetch(`${basePath}main.wasm`),
             go.importObject
         );
 

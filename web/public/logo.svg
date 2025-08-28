@@ -1,0 +1,29 @@
+<svg id="logoSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-48 h-48 mx-auto" fill="none">
+                <!-- Outer rounded rectangle for the main shape -->
+                <rect x="25" y="25" width="50" height="50" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+
+                <!-- Inner grid/table with colored cells -->
+                <!-- First row -->
+                <rect x="29" y="29" width="9" height="9" fill="#f87171" rx="2" ry="2"/>
+                <rect x="40" y="29" width="9" height="9" fill="#fbbf24" rx="2" ry="2"/>
+                <rect x="51" y="29" width="9" height="9" fill="#34d399" rx="2" ry="2"/>
+                <rect x="62" y="29" width="9" height="9" fill="#60a5fa" rx="2" ry="2"/>
+
+                <!-- Second row -->
+                <rect x="29" y="40" width="9" height="9" fill="#34d399" rx="2" ry="2"/>
+                <rect x="40" y="40" width="9" height="9" fill="#60a5fa" rx="2" ry="2"/>
+                <rect x="51" y="40" width="9" height="9" fill="#f87171" rx="2" ry="2"/>
+                <rect x="62" y="40" width="9" height="9" fill="#fbbf24" rx="2" ry="2"/>
+
+                <!-- Third row -->
+                <rect x="29" y="51" width="9" height="9" fill="#60a5fa" rx="2" ry="2"/>
+                <rect x="40" y="51" width="9" height="9" fill="#f87171" rx="2" ry="2"/>
+                <rect x="51" y="51" width="9" height="9" fill="#fbbf24" rx="2" ry="2"/>
+                <rect x="62" y="51" width="9" height="9" fill="#34d399" rx="2" ry="2"/>
+
+                <!-- Fourth row -->
+                <rect x="29" y="62" width="9" height="9" fill="#fbbf24" rx="2" ry="2"/>
+                <rect x="40" y="62" width="9" height="9" fill="#34d399" rx="2" ry="2"/>
+                <rect x="51" y="62" width="9" height="9" fill="#60a5fa" rx="2" ry="2"/>
+                <rect x="62" y="62" width="9" height="9" fill="#f87171" rx="2" ry="2"/>
+            </svg>

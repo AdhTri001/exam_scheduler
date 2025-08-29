@@ -46,7 +46,7 @@ jobs:
     - name: Build WebAssembly
       working-directory: ./go
       run: |
-        GOOS=js GOARCH=wasm go build -o ../web/public/main.wasm ./cmd/wasm
+        GOOS=js GOARCH=wasm go build -ldflags="-s -w" -o ../web/public/main.wasm ./cmd/wasm
 
     - name: Copy wasm_exec.js
       run: |
